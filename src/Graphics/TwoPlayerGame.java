@@ -385,7 +385,9 @@ public class TwoPlayerGame {
 
                 try{
                     BufferedImage image = ImageIO.read(new File("src/Graphics/PieceIcons/" + path + ".png"));
-                    add(new JLabel(new ImageIcon(image)));
+                    JLabel label = new JLabel(new ImageIcon(image));
+                    add(label);
+                    label.setHorizontalAlignment(JLabel.CENTER);
                 }
                 catch(IOException e){
                     e.printStackTrace();
